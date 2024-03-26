@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>md.</title>
+    <link rel="icon " href="https://img.icons8.com/color/48/greek-helmet.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="titulo">
+        <h2>md.</h2>
+        <!-- <p>
+          by
+          <a href="https://luispicon.online/" target="_blank">Luis</a>
+        </p> -->
+      </div>
+      <div class="guardar-eliminar">
+        <img
+          src="https://img.icons8.com/ios-glyphs/90/FA5252/filled-trash.png"
+          alt="delete"
+          class="borrar"
+          id="borrar"
+        />
+        <button class="guardar deshabilitado" id="guardar">Save change</button>
+      </div>
+    </header>
+    <main class="editor">
+      <div class="editor-md">
+        <div class="editor-md-pestaña">
+          <h4>MARKDOWN<span class="ai">.</span></h4>
+          <div class="funciones-ai">
+            <img
+              class="copiar"
+              src="https://img.icons8.com/material-outlined/24/FFFFFF/copy.png"
+              alt="copy"
+            />
+          </div>
+        </div>
+        <div class="editor-md-codigo">
+          <textarea
+            class="textarea"
+            id="input"
+            placeholder="# write code MARKDOWN"
+          >
+### Escribir borrar, guardar y copiar
+
+- Guarda el código en tu navegador
+
+- Copia el código HTML como el código Mark Down
+
+🦉 _creado por [luispicon](https://luispicon.online)_
+           
+          </textarea>
+        </div>
+      </div>
+      <div class="editor-resultado">
+        <div class="editor-resultado-pestaña">
+          <h4>Preview</h4>
+          <div class="funciones-ai">
+            <img
+              class="copiar-html"
+              src="https://img.icons8.com/material-outlined/24/FFFFFF/copy.png"
+              alt="copy"
+            />
+          </div>
+        </div>
+        <div class="editor-md-vista" id="vista"></div>
+      </div>
+      <div class="editor-md-loader" id="editor-md-loader"></div>
+    </main>
+
+    <div class="notificacion"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+      integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
