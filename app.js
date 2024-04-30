@@ -18,6 +18,15 @@ function mdHtml(codigoMd) {
 function mdInner(codigoMd) {
   $input.value = codigoMd;
 }
+function guardarComo(txt) {
+  const blob = new Blob([txt], { type: "text/markdown" });
+
+  const enlaceDescarga = document.createElement("a");
+  enlaceDescarga.href = window.URL.createObjectURL(blob);
+  enlaceDescarga.download = "documento.md";
+  enlaceDescarga.click();
+  window.URL.revokeObjectURL(enlaceDescarga.href);
+}
 //al parámetro *elementoHtml* inserta una animación de error
 function accionInvalida(elementoHtml) {
   elementoHtml.classList.add("error");
@@ -95,7 +104,7 @@ d.addEventListener("click", (e) => {
   if (e.target.matches(".guardar")) {
     $guardar.classList.add("deshabilitado");
     $ai.classList.remove("ai-active");
-    guardarMd($input.value);
+    guardarComo($input.value);
   }
   //img portales
   if (e.target.matches("#borrar")) {
